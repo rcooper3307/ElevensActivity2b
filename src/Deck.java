@@ -51,7 +51,10 @@ public class Deck {
      */
     public boolean isEmpty() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
-        return cards.isEmpty();
+        if (this.cards.size() == 0) {
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -78,6 +81,11 @@ public class Deck {
      */
     public Card deal() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+        this.size = this.size - 1;
+        if (this.size > 0) {
+            return this.cards.get(this.size);
+        }
+        return null;
 
 
 
